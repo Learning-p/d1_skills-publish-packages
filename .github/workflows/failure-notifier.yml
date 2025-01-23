@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'failure' }}
     steps:
-      - run: curl -X POST -H 'Content-type: application/json' --data \'{\"text":"Workflow failed\"}\' {{ secerets.SLACK_WEBHOOK_URL }}
+      - run: curl -X POST -H \'Content-type: application/json\' --data \'{\"text\":\"Workflow failed\"}\' {{ secerets.SLACK_WEBHOOK_URL }}
